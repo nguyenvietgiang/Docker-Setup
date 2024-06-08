@@ -1,0 +1,21 @@
+version: '3.7'
+
+networks:
+  bookie:
+
+services:
+  mysql:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: TestDB
+      MYSQL_USER: root
+      MYSQL_PASSWORD: vip1111
+    volumes:
+      - ./docker/mysql:/var/lib/mysql
+    networks:
+      - bookie
+    ports:
+      - "3309:3306"
+volumes:
+  mysql:
