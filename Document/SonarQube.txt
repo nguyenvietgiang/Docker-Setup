@@ -1,0 +1,2 @@
+SonarQube cần chạy với ElasticSearch (khả năng sẽ lỗi nếu không có)
+
