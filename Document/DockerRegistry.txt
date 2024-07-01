@@ -1,0 +1,11 @@
+Về mặt cơ bản, Docker Registry và Docker Hub đều là những kho lưu trữ để lưu trữ và quản lý images Docker.
+Tuy nhiên, có một số điểm khác biệt chính giữa hai loại registry này:
+
+Khả năng truy cập:
+Docker Hub: Public Docker Registry, mọi người đều có thể truy cập và pull images Docker miễn phí.
+Docker Registry: Có thể là public hoặc private. Private Docker Registry chỉ cho phép những người dùng được ủy quyền truy cập.
+Kiểm soát:
+Docker Hub: Bạn có ít quyền kiểm soát hơn đối với images Docker được lưu trữ trên Docker Hub. Ví dụ, bạn không thể xóa images Docker khỏi Docker Hub nếu người khác đã pull chúng.
+Docker Registry: Bạn có nhiều quyền kiểm soát hơn đối với images Docker được lưu trữ trên Docker Registry của riêng bạn. Bạn có thể xóa images Docker, quản lý quyền truy cập và cấu hình các cài đặt bảo mật khác
+
+DockerHub là một kiểu của docker Registry
