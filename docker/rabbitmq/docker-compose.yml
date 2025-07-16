@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    container_name: my-rabbitmq 
+    hostname: rabbitmq_host 
+    ports:
+      - "5672:5672" # Cổng AMQP mặc định cho ứng dụng kết nối
+      - "15672:15672" # Cổng giao diện quản lý web (RabbitMQ Management Plugin)
+    environment:
+      RABBITMQ_DEFAULT_USER: guest 
+      RABBITMQ_DEFAULT_PASS: guest 
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq # Lưu trữ dữ liệu RabbitMQ vào một Docker Volume
+      - rabbitmq_logs:/var/log/rabbitmq # Lưu trữ logs vào một Docker Volume riêng
+    restart: unless-stopped # Tự động khởi động lại container
+
+volumes:
+  rabbitmq_data: 
+  rabbitmq_logs: 

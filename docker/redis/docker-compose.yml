@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  redis:
+    image: redis:latest # Sử dụng phiên bản Redis mới nhất
+    container_name: my-redis
+    ports:
+      - "6379:6379" # Ánh xạ cổng: HOST:CONTAINER
+    volumes:
+      - redis_data:/data # Lưu trữ dữ liệu Redis vào một Docker Volume để không bị mất khi container dừng/khởi động lại
+    restart: unless-stopped 
+
+  redis-commander:
+    image: rediscommander/redis-commander:latest 
+    container_name: my-redis-commander 
+    environment:
+      - REDIS_HOSTS=local:redis:6379
+      - HTTP_USER=admin # Tên người dùng để đăng nhập Redis Commander (tùy chọn)
+      - HTTP_PASS=redisadmin 
+    ports:
+      - "8081:8081" 
+    restart: unless-stopped 
+
+volumes:
+  redis_data: # Định nghĩa Docker Volume để lưu trữ dữ liệu Redis
