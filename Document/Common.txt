@@ -1,0 +1,7 @@
+
+docker-compose up	                Khởi động tất cả dịch vụ được định nghĩa trong docker-compose.yml.
+docker-compose up -d	            Chạy ở chế độ nền (detached).
+docker-compose down	                Dừng và xóa tất cả container, network, volume tạo bởi compose.
+docker-compose build	            Build lại image từ Dockerfile nếu có thay đổi.
+docker-compose logs	                Xem log của tất cả dịch vụ.
+docker-compose exec <service> bash	Truy cập shell trong 1 service.

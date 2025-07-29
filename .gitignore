@@ -1,0 +1,8 @@
+# Bỏ qua tất cả thư mục *_data trong docker/datalake
+/docker/datalake/minio_data/
+/docker/datalake/mongo_data/
+/docker/datalake/postgres_data/
+/docker/datalake/qdrant_data/
+/docker/datalake/neo4j/
+/docker/datalake/fastapi_app/
+
