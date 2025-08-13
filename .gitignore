@@ -6,3 +6,9 @@
 /docker/datalake/neo4j/
 /docker/datalake/fastapi_app/
 
+/docker/ai-data/minio_data/
+/docker/ai-data/mongo_data/
+/docker/ai-data/postgres_data/
+/docker/ai-data/qdrant_data/
+/docker/ai-data/neo4j/
+/docker/ai-data/fastapi_app/
